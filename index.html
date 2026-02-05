@@ -379,7 +379,7 @@ async function getYTData() {
 
     if (!cachedTime || (Date.now() - cachedTime > CACHE_DURATION)) {
         try {
-            const response = await fetch(`./assety/config.json?v=${Date.now()}`);
+            const response = await fetch(`assety/config.json?v=${Date.now()}`);
             const channels = await response.json();
             const users = [];
 
@@ -434,7 +434,7 @@ async function initComparisonSliders() {
     if (!container) return;
 
     try {
-        const response = await fetch(`./assety/config.json?v=${Date.now()}`);
+        const response = await fetch(`assety/config.json?v=${Date.now()}`);
         const config = await response.json();
         if (!config.projects) return;
 

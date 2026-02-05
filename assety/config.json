@@ -1,5 +1,6 @@
 {
-  "yt_channels": ["@Wikiks", "@Kaliksszef", "@mikirollo7404"],
+  "channels": ["@Wikiks", "@Kaliksszef", "@mikirollo7404"],
   "showmore_list": ["1", "2", "3", "4", "5"],
   "projects": ["mace", "cwel"]
+
 }

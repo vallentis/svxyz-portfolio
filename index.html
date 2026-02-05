@@ -147,34 +147,63 @@
             <h2 class="reveal-left text-[50px] font-madetommy mb-10 text-center w-max mx-auto bg-clip-text text-transparent bg-gradient-to-r from-color to-white uppercase glow2">Moje Prace</h2>
             <div id="comparison-container" class="mt-[100px] flex flex-col gap-10"></div>
             <nav class="flex justify-center items-center gap-8 mt-10">
-                <button onclick="window.location.href='./subindex.html'" class="reveal-right text-[40px] font-madetommy bg-clip-text text-transparent bg-gradient-to-r from-color to-white uppercase glow2 hover:glow">Zobacz więcej</button>
+                <div class="reveal-fade3 hidden md:block">
+                    <svg class="animate-arrowBounceL w-10 h-10 text-white drop-shadow-[0_0_8px_rgba(0,252,255,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                    </svg>
+                </div>
+
+                <button onclick="window.location.href='./subindex.html'" 
+                        class="reveal-right text-[40px] font-madetommy w-max bg-clip-text text-transparent bg-gradient-to-r from-color to-white uppercase transition-all duration-[0.6s] glow2 hover:glow nav-link">
+                    Zobacz więcej
+                </button>
+
+                <div class="reveal-fade3 hidden md:block">
+                    <div class="animate-arrowBounceR">
+                        <svg class="-scale-x-100 w-10 h-10 text-white drop-shadow-[0_0_8px_rgba(0,252,255,0.5)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                        </svg>
+                    </div>
+                </div>
             </nav>
         </section>
         
-        <section id="about" class="mt-[150px] mb-20">
+        <section id="about" class="mt-[150px]">
             <p class="reveal-left text-center text-[50px] w-max mx-auto bg-clip-text text-transparent bg-gradient-to-r from-color to-white uppercase glow2">O mnie</p>
             <div class="mt-[100px] grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div class="reveal-right md:col-span-2 p-10 bg-graybg border-2 border-white/10 rounded-[20px] hover:border-color transition-all">
-                    <p class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-color to-white mb-4">Grafik z pasją</p>
-                    <p class="text-gray">Specjalizuję się w identyfikacji wizualnej i social media.</p>
+                <div class="reveal-right md:col-span-2 p-10 md:px-[64px] bg-graybg border border-2 border-white/10 rounded-[20px] transition-all duration-[0.8s] hover:border-color hover:shadow-[0_0_20px_rgba(0,252,255,0.4),inset_0_0_10px_rgba(0,252,255,0.1)] group">
+                    <p class="text-2xl font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-color to-white uppercase glow2 mb-4">Grafik z pasją</p>
+                    <p class="text-gray leading-relaxed ">
+                        Specjalizuję się w tworzeniu identyfikacji wizualnej oraz grafik social media. Każdy projekt to dla mnie nowa historia i wyzwanie, do którego podchodzę indywidualnie.
+                    </p>
                 </div>
-                <div class="reveal-left p-10 bg-graybg border-2 border-white/10 rounded-[20px] flex flex-col items-center">
-                    <span class="text-5xl font-bold">2</span>
-                    <span class="text-sm uppercase text-color">Lata doświadczenia</span>
+
+                <div class="reveal-left p-10 bg-graybg border border-2 border-white/10 rounded-[20px] transition-all duration-[0.8s] hover:border-color hover:shadow-[0_0_20px_rgba(0,252,255,0.4),inset_0_0_10px_rgba(0,252,255,0.1)] flex flex-col justify-center items-center text-center">
+                    <span class="text-5xl font-bold text-white mb-2">2</span>
+                    <span class="text-sm tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-color to-white uppercase glow2">Lata doświadczenia</span>
                 </div>
-                <button onclick="copyDiscordNick(this)" class="reveal-left md:col-span-3 p-6 bg-graybg border-2 border-white/10 rounded-[20px] group transition-all hover:border-color">
-                    <div class="flex justify-between items-center w-full">
-                        <div class="flex items-center gap-4">
-                            <img src="./assety/Discord-logo.png" class="w-16 h-16">
-                            <div class="text-left">
-                                <p class="text-xs text-gray">Discord</p>
-                                <p id="dc-nick" class="text-2xl font-bold group-hover:text-color">xsvxyz</p>
+
+                <div class="reveal-right p-10 bg-graybg border border-2 border-white/10 rounded-[20px] transition-all duration-[0.8s] hover:border-color hover:shadow-[0_0_20px_rgba(0,252,255,0.4),inset_0_0_10px_rgba(0,252,255,0.1)] group flex flex-col justify-center items-center text-center">
+                    <p class="text-2xl font-bold w-max bg-clip-text text-transparent bg-gradient-to-r from-color to-white uppercase glow2 mb-4">Programy</p>
+                    <div class="flex gap-4">
+                        <img src="assety/photoshop.png" alt="Photoshop" class="w-12 h-12 object-contain">
+                        <img src="assety/illustrator.png" alt="Illustrator" class="w-12 h-12 object-contain">
+                    </div>
+                </div>
+
+                <button onclick="copyDiscordNick(this)" class="reveal-left md:col-span-2 p-6 bg-graybg border-2 border-white/10 rounded-[20px] transition-all duration-[0.8s] hover:border-color hover:shadow-[0_0_20px_rgba(0,252,255,0.4),inset_0_0_10px_rgba(0,252,255,0.1)] group">
+                    <nav class="flex justify-between items-center">
+                        <div class="flex">
+                            <img src="./assety/Discord-logo.png" alt="DC Logo" class="w-[100px] h-[100px] drop-shadow-[0_0_5px_#5765eb]">
+                            <div class="flex flex-col text-left justify-center ml-2">
+                                <p class="text-[12px] text-[#999999] transition-colors duration-300">Znajdź mnie na Discordzie</p>
+                                <p id="dc-nick" class="text-[32px] text-white transition-colors duration-300 group-hover:text-color">xsvxyz</p>
                             </div>
                         </div>
-                        <div class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-white group-hover:text-black">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        <div class="w-12 h-12 mr-[30px] rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                         </div>
-                    </div>
+                    </nav>
                 </button>
             </div>
         </section>

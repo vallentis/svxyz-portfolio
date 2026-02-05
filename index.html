@@ -68,7 +68,9 @@
         src: url('assety/MadeTommy.otf') format('truetype');
     }
 
-    :root { --color: #00fcff; }
+    :root {
+        --color: #00fcff;
+    }
 
     .bg-grid {
         background-size: 50px 50px;
@@ -80,29 +82,105 @@
     .reveal-down { opacity: 0; transform: translateY(-200px); }
     .reveal-left { opacity: 0; transform: translateX(200px); }
     .reveal-right { opacity: 0; transform: translateX(-200px); }
-    .reveal-fade, .reveal-fade2, .reveal-fade3 { opacity: 0; }
+    .reveal-fade { opacity: 0; }
+    .reveal-fade2 { opacity: 0; }
+    .reveal-fade3 { opacity: 0; }
 
-    .reveal-up, .reveal-down, .reveal-left, .reveal-right { transition: all 0.8s cubic-bezier(0.5, 1, 0.5, 1); }
-    .reveal-fade3 { transition: opacity 1s ease-in-out 0.3s; }
-    .reveal-fade2 { transition: opacity 1.5s ease-in-out; }
-    .reveal-fade { transition: opacity 1s ease-in-out 1s; }
+    .reveal-up, .reveal-down, .reveal-left, .reveal-right {
+        transition: all 0.8s cubic-bezier(0.5, 1, 0.5, 1);
+    }
 
-    .showup { opacity: 1 !important; transform: translate(0, 0) !important; }
+    .reveal-fade3 {
+        transition: opacity 1s ease-in-out 0.3s;
+    }
+
+    .reveal-fade2 {
+        transition: opacity 1.5s ease-in-out;
+    }
+
+    .reveal-fade {
+        transition: opacity 1s ease-in-out 1s;
+    }
+
+    .showup {
+        opacity: 1 !important;
+        transform: translate(0, 0) !important;
+    }
+    
     .glow { filter: drop-shadow(0 0 8px #00fcff); }
     .glow2 { filter: drop-shadow(0 0 10px rgba(0, 252, 255, 0.3)); }
 
-    .nav-link::after {
-        content: ''; position: absolute; width: 100%; height: 2px; bottom: -2px; left: 0;
-        background: linear-gradient(90deg, var(--color, #00fcff), #fff);
-        transform: scaleX(0); transform-origin: bottom right; transition: transform 0.3s ease-out;
+    .hover\:glow:hover {
+        filter: drop-shadow(0 0 10px rgba(0, 252, 255, 1));
     }
-    .nav-link:hover::after { transform: scaleX(1); transform-origin: bottom left; }
 
-    html, body { height: 100%; margin: 0; padding: 0; overflow-x: hidden; }
-    body { overflow-y: auto; position: relative; }
+    .nav-link {
+        position: relative;
+        display: inline-block;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background: linear-gradient(90deg, var(--color, #00fcff), #fff);
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    html {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    body {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .absolute {
+        pointer-events: none;
+        user-select: none;
+    }
+
+    input[type="range"].absolute {
+        pointer-events: auto !important;
+        cursor: pointer;
+    }
+
+    #comparison-container {
+        container-type: inline-size;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    [id^="overlay-"] img {
+        width: 100cqw !important;
+        height: 100% !important;
+        max-width: none !important;
+        object-fit: cover;
+        display: block;
+    }
 
     .overlay-part img {
-        width: 100cqw !important; height: 100% !important; max-width: none !important; object-fit: cover;
+        width: 100cqw !important;
+        height: 100% !important;
+        max-width: none !important;
+        object-fit: cover;
     }
 </style>
 
